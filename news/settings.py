@@ -30,6 +30,11 @@ SECRET_KEY = '&o&59c!b8u+w^le2m1g#5@$v4&)(hjevx88_5(wk*06hx7r%2('
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+MIDDLEWARE_CLASSES = (
+    # Simplified static file serving.
+    # https://warehouse.python.org/project/whitenoise/
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+)
 
 
 # Application definition
@@ -73,7 +78,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'news.wsgi.application'
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
