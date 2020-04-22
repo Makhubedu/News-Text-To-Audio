@@ -15,7 +15,14 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Extra places for collectstatic to find static files
+# Extra places for collectstatic to find static files.
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '&o&59c!b8u+w^le2m1g#5@$v4&)(hjevx88_5(wk*06hx7r%2('
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
