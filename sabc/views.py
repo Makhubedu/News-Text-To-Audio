@@ -46,23 +46,19 @@ def home(request):
         'text_and_image':mylist
 
     }
-
-  
     return render(request,'base.html',context)
 
 def new_text(request):
-
-
     val = request.POST.get("search")
+    num = val[:9]
+    new_num = num.replace(' ', '')
     audio = gTTS(val)
-    new_audio = audio.save("./sabc/static/song.mp3")
-    print(new_audio)
+    new_audio = audio.save(f"./sabc/static/{new_num}.mp3")
     context = {
         "text": val,
-        "sound":new_audio
+        "sound":new_num,
+        
     }
-    print("This is the value of :",val)
-
-    return render(request, 'my_app/new_text.html',context)
+    return render(request, 'new_text.html',context)
 
     

@@ -1,7 +1,12 @@
-{% extends "my_app/base.html" %} 
+{% extends "base.html" %} 
 {% load static %} 
 {% block new_text %}
+<h2>{{sound}}.mp3</h2>
 <center>
-    <audio src="{% static 'song.mp3'%}" controls> 
+    <audio src="{% static '{{sound}}.mp3' %}" controls> 
+    <h1>{{sound}} And Something</h1>
 </center>
 {% endblock new_text %}
+{% block ending %}
+<hr>
+{% endblock ending %}

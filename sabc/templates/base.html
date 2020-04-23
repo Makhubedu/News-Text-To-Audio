@@ -42,7 +42,9 @@
             </form>
         </div>
         <br>
-        <br> {% block new_text %} {% endblock new_text %}
+        <br> {% block new_text %} 
+
+        {% endblock new_text %}
         <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="{{image_title}}">
@@ -82,6 +84,8 @@
         </div>
 
     </div>
+    {% block ending %}
+    {% endblock ending %}
     <script src="{% static 'js/app.js' %}"></script>
 </body>
 
