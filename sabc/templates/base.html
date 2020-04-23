@@ -61,11 +61,11 @@
 
     <div class="container">
     {% for a,b,c,d in text_and_image%}
-        <div class="row">
-            <div class="col s4">
+        <div class="row" id="the-raw">
+            <div class="col s12 m6" >
                 <div class="card">
                     <div class="card-image">
-                        <img src="{{a}}" width="220" height="220">
+                        <img id="lefa" src="{{a}}" width="33.3%"  height="220">
                         <span class="card-title">{{b}}</span>
                     </div>
                     <div class="card-content">
