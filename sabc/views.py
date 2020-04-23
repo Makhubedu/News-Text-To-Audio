@@ -53,7 +53,7 @@ def new_text(request):
     num = val[:9]
     new_num = num.replace(' ', '')
     audio = gTTS(val)
-    new_audio = audio.save(f"./sabc/static/{new_num}.mp3")
+    new_audio = audio.save("./sabc/static/song.mp3")
     context = {
         "text": val,
         "sound":new_num,
