@@ -8,7 +8,7 @@ from django.http import HttpResponse
 def home(request):
 
 
-    html = requests.get("https://www.sabcnews.com/sabcnews/category/politics/").text
+    html = requests.get("https://www.sabcnews.com/sabcnews/category/south-africa/").text
     soup = BeautifulSoup(html,'html.parser')
 
     title = soup.find("h1", class_='rpw2e-title').get_text()
