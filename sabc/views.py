@@ -14,7 +14,10 @@ def home(request):
     title = soup.find("h1", class_='rpw2e-title').get_text()
     lead_content = soup.find('div',class_='category_lead_excerpt').get_text()
     img = soup.find('img',class_='wp-post-image')['src']
-    image_caption = soup.find('div', class_='featured_caption').get_text()
+    try:
+        image_caption = soup.find('div', class_='featured_caption').get_text()
+    except:
+        print("Some thing is wrong.")
 
     # Finding picture for sub news
 
